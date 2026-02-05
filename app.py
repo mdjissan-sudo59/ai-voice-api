@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "AI Voice Detection API is running"
+    return "OK"
 
 @app.route("/detect-voice", methods=["POST"])
 def detect_voice():
@@ -12,4 +12,4 @@ def detect_voice():
         "is_ai_generated": True,
         "confidence": 0.9,
         "language": "en"
-    }), 200
+    })
